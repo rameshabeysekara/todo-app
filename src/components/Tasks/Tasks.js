@@ -1,14 +1,16 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import styles from "./styles.js";
 import Task from "./Task/Task.js";
 
-const Tasks = () => {
+export default function Tasks(props) {
   return (
     <View style={styles.container}>
-      <Text>Tasks</Text>
-      <Task />
+      <ScrollView>
+        {props.tasks.map((task, index) => {
+          return <Task key={index} task={task} />;
+        })}
+      </ScrollView>
     </View>
   );
-};
-export default Tasks;
+}
