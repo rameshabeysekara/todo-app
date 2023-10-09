@@ -36,16 +36,25 @@ export default function Form(props) {
         </View>
       )}
       <TextInput
+        style={styles.input}
         placeholder="Enter a task description"
         maxLength={150}
         onChangeText={handleDescriptionChange}
         defaultValue={taskDescription}
       ></TextInput>
-      <View>
-        <Text>Completed:</Text>
-        <Switch value={taskDone} onValueChange={handleStatusChange} />
+      <View style={styles.input}>
+        <View style={styles.switchInput}>
+          <Text style={styles.switchInput.item}>Completed:</Text>
+          <Switch
+            style={styles.switchInput.item}
+            value={taskDone}
+            onValueChange={handleStatusChange}
+          />
+        </View>
       </View>
-      <Button title="Add" onPress={handleAddPress} />
+      <View style={styles.buttonContainer}>
+        <Button title="Add" onPress={handleAddPress} />
+      </View>
     </View>
   );
 }

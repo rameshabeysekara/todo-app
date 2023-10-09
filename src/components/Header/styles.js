@@ -9,6 +9,13 @@ const styles = StyleSheet.create({
     borderBottomWidth: 3,
     paddingTop: 30,
   },
+  icon: {
+    marginHorizontal: 10,
+    marginBottom: 10,
+  },
+  text: {
+    marginHorizontal: 10,
+  },
 });
 
 export default styles;
