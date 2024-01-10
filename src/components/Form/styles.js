@@ -3,24 +3,52 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     alignSelf: "stretch",
-    backgroundColor: "#bcbcbc",
-    padding: 10,
+    padding: 20,
   },
-  input: {
-    height: 50,
-    margin: 12,
+  label: {
+    color: "#777",
+    fontSize: 16,
+  },
+  textbox: {
+    backgroundColor: "#fff",
     borderWidth: 1,
-    padding: 10,
+    borderColor: "#bcbcbc",
+    paddingVertical: 7,
+    paddingHorizontal: 14,
+    fontSize: 16,
+    marginTop: 5,
   },
-  switchInput: {
-    flex: 1,
-    flexDirection: "row",
-    item: {
-      flex: 1,
+  switch: {
+    container: {
+      alignItems: "center",
+      flexDirection: "row",
+      marginTop: 20,
+      marginBottom: 20,
+    },
+    label: {
+      color: "#777",
+      fontSize: 16,
+      marginRight: 10,
     },
   },
-  buttonContainer: {
-    paddingBottom: Platform.OS === "ios" ? 20 : 10,
+  errorMessage: {
+    container: {
+      backgroundColor: "#fff",
+      padding: 10,
+      marginBottom: 30,
+      borderColor: "#c00",
+      borderWidth: 1,
+      borderLeftWidth: 8,
+    },
+    label: {
+      color: "#c00",
+      fontSize: 14,
+      fontWeight: "bold",
+    },
+    text: {
+      color: "#c00",
+      fontSize: 16,
+    },
   },
 });
 

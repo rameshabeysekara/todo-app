@@ -1,16 +1,16 @@
-import React from "react";
-import { Text, View } from "react-native";
+import { View, Text } from "react-native";
+import { FontAwesome5 } from "@expo/vector-icons";
 import styles from "./styles";
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faListCheck } from "@fortawesome/free-solid-svg-icons/faListCheck";
+import { Colors } from "../../styles/colors";
 
-const Header = () => {
+export default function Header() {
   return (
     <View style={styles.container}>
-      <FontAwesomeIcon icon={faListCheck} size={28} style={styles.icon} />
-      <Text style={styles.text}>Todo App</Text>
-      <Text style={styles.text}>by Ramesh Abeysekara</Text>
+      <View style={styles.leftGroup}>
+        <FontAwesome5 name="tasks" size={24} color={Colors.primary} />
+        <Text style={styles.title}>Todo App</Text>
+      </View>
+      <Text style={styles.author}>by Ramesh Abeysekara</Text>
     </View>
   );
-};
-export default Header;
+}
